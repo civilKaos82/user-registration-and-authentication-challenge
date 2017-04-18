@@ -74,7 +74,7 @@ If users register with our site, they'll need to be able to log into their accou
 We'll give that responsibility to the `User` model by defining an `.authenticate` class method.  The method will accept two arguments—an e-mail address and a password—and attempt to find a user with those credentials.  We'll need to implement this method ourselves, but Figure 4 provides some shell code and pseudocode.
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   # e.g., User.authenticate('jesse@devbootcamp.com', 'apples123')
   def self.authenticate(email, password)
     # if email and password correspond to a valid user, return that user
